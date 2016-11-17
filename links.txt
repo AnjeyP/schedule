@@ -1,0 +1,1 @@
+https://jqueryui.com/draggable/ - модуль для обеспечения drug-n-drop
