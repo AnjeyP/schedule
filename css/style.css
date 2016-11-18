@@ -18,19 +18,17 @@ th{
 
 .user1{
 	background: url(D:/PHPacademy/Projects/schedule/img/boldman_39x38.png);
-	/* background-color: green; */
+
 }
-/* .user1::after{
-	content: "v";
-} */
+
 .user2{
 	background: url(D:/PHPacademy/Projects/schedule/img/nurdman_39x39.png);
-	/* background-color: orange; */
+
 
 }
 .user3{
 	background: url(D:/PHPacademy/Projects/schedule/img/coolman.png);
-	/* background-color: lightblue; */
+	
 	
 }
 .current{
