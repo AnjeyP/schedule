@@ -4,7 +4,7 @@ function init(){
 	var td = $('td');
 	
 	//filling months and days
-	var monthArr = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+	/*var monthArr = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 	var day=0;
 	var month=0;
 	td.each(function(index){
@@ -13,18 +13,16 @@ function init(){
 			|| index==223   || index==255   || index==287  || index==319   
 			|| index==351 || index==383)
 			$(this).text(monthArr[month++]).css("background-color","lightblue");
-	})
+	})*/
 
 	//generating working schedule '1by2' for employee
 	td.each(function(index){
 			//checking first row and column to be not allowed to addClass
-			if (index>31 && index!==63 && index!==95 && index!==127 && index!==159 && index!==191 && 
-				index!==223 && index!==255 && index!==287 && index!==319 && index!==351 && index!==383 &&
-				/*this td also must be empty*/index!==93 && index!==94 && index!==158 && index!==222 && index!==318 && 
-				index!==382){
-				if ((index-32)%3===0) $(this).addClass("user1");
-			if ((index-33)%3===0) $(this).addClass("user2");
-			if ((index-34)%3===0) $(this).addClass("user3");
+			if (index!==60 && index!==61 && index!==123 && index!==185 && index!==278 &&
+				index!==340){
+				if (index%3===0) $(this).addClass("user1");
+			if ((index-1)%3===0) $(this).addClass("user2");
+			if ((index-2)%3===0) $(this).addClass("user3");
 
 		}	
 	})
@@ -33,6 +31,8 @@ function init(){
 	var data = new Date();
 	var date = data.getDate();
 	var montn = data.getMonth();
+	var year = data.getFullYear();
+	$("th").text(year);
 	/*var month=6;
 	var date = 5;*/
 
@@ -63,7 +63,7 @@ function init(){
 		break;
 	}
 	td.each(function(index){
-		if (index==res) $(this).addClass("current");
+		if (index==res || index==(res-date) || index==date-1) $(this).addClass("current");
 	})
 
 	// switch employee by click
