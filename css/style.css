@@ -1,40 +1,38 @@
 /* @import reset.css */
-body{
-	align-content: center;
-}
+
 table, th, td {
 	border: 1px solid black;
 	border-collapse: collapse;
 }
 
 td{
-	font-size: 10px;
-	min-width: 14px;
-	height: 15px;
+	font-size: 20px;
+	min-width: 37px;
+	height: 37px;
 	text-align: center;
 }
 th{
-	font-size: 10px;
+	font-size: 16px;
 	background-color: green;
 }
 
 .user1{
-	background: url(D:/PHPacademy/dz/Projects/img/boldman.png);
+	background: url(D:/PHPacademy/Projects/schedule/img/boldman_39x38.png);
 	/* background-color: green; */
 }
 /* .user1::after{
 	content: "v";
 } */
 .user2{
-	background: url(D:/PHPacademy/dz/Projects/img/nurdman.png);
+	background: url(D:/PHPacademy/Projects/schedule/img/nurdman_39x39.png);
 	/* background-color: orange; */
 
 }
 .user3{
-	background: url(D:/PHPacademy/dz/Projects/img/youngman.png);
+	background: url(D:/PHPacademy/Projects/schedule/img/coolman.png);
 	/* background-color: lightblue; */
 	
 }
 .current{
-	border: 2px solid red;
+	border: 3px solid blue;
 }
