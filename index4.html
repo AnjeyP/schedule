@@ -8,13 +8,35 @@
     <script src="jquery-ui-1.10.3/ui/jquery.ui.core.js"></script>
     <script src="jquery-ui-1.10.3/ui/jquery.ui.widget.js"></script>
     <script src="jquery-ui-1.10.3/ui/jquery.ui.tabs.js"></script>
+    <script src="jquery-ui-1.10.3/ui/jquery.ui.datepicker.js"></script>
     <script>
+
 
         $(function () {
             $("#tabs").tabs();
-        });
+      });
 
-    </script>
+</script>
+<script>
+
+  $(function () {
+      $("#datepicker").datepicker({
+                // настройки для виджета datepicker
+                showOn: "button",                       // Отображать при нажатии на кнопку. Возможные значения (focus, button, both)
+                buttonImage: "img/calendar.gif",     // Путь к картинке, которая будет отображаться на кнопке
+                buttonImageOnly: true                   // true - не отображать кнопку, отображать только изображение. Работает только тогда, когда установлен параметр buttonImage
+          });
+});
+  $(function () {
+      $("#datepicker2").datepicker({
+                // настройки для виджета datepicker
+                showOn: "button",                       // Отображать при нажатии на кнопку. Возможные значения (focus, button, both)
+                buttonImage: "img/calendar.gif",     // Путь к картинке, которая будет отображаться на кнопке
+                buttonImageOnly: true                   // true - не отображать кнопку, отображать только изображение. Работает только тогда, когда установлен параметр buttonImage
+          });
+});
+
+</script>
 </head>
 <body>
     <div id="tabs">
@@ -27,17 +49,17 @@
             <li><a href="#tabs-5">4 Apr</a></li>
             <li><a href="#tabs-6">5 May</a></li>
             <li><a href="#tabs-7">6 Jun</a></li>
-             <li><a href="#tabs-8">7 Jul</a></li>
-              <li><a href="#tabs-9">8 Aug</a></li>
-               <li><a href="#tabs-10">9 Sep</a></li>
-               <li><a href="#tabs-11">10 Oct</a></li>
-                <li><a href="#tabs-12">11 Nov</a></li>
-                 <li><a href="#tabs-13">12 Dec</a></li>
-                 <li><a href="#tabs-14">Statistics</a></li>
-        </ul>
-        <!--Содержимое вкладок-->
-        <div id="tabs-1">
-             <table>
+            <li><a href="#tabs-8">7 Jul</a></li>
+            <li><a href="#tabs-9">8 Aug</a></li>
+            <li><a href="#tabs-10">9 Sep</a></li>
+            <li><a href="#tabs-11">10 Oct</a></li>
+            <li><a href="#tabs-12">11 Nov</a></li>
+            <li><a href="#tabs-13">12 Dec</a></li>
+            <li><a href="#tabs-14">Statistics</a></li>
+      </ul>
+      <!--Содержимое вкладок-->
+      <div id="tabs-1">
+       <table>
         <th>
             <td></td>
             <td></td>
@@ -482,224 +504,217 @@
 </table>
 </br>
 <div id="filters">
-<button class="btn1">User1</button>
-<button class="btn2">User2</button>
-<button class="btn3">User3</button>
+      <button class="btn1">User1</button>
+      <button class="btn2">User2</button>
+      <button class="btn3">User3</button>
 </div>
-        </div>
-        <div id="tabs-2">
-           
-        </div>
-        <div id="tabs-3">
-            
-        </div>
-        <div id="tabs-4">
-            
-        </div>
-        <div id="tabs-5">
-            
-        </div>
-        <div id="tabs-6">
-            
-        </div>
-        <div id="tabs-7">
-            
-        </div>
-        <div id="tabs-8">
-            
-        </div>
-        <div id="tabs-9">
-            
-        </div>
-        <div id="tabs-10">
-            
-        </div>
-        <div id="tabs-11">
-            
-        </div>
-        <div id="tabs-12">
-            
-        </div>
-        <div id="tabs-13">
-             <table>
-           <tr>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                
-           </tr>
-           <tr>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                
-           </tr>
-           <tr>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                
-           </tr>
-           <tr>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                
-           </tr>
-           <tr>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                 <td></td>
-                
-           </tr>
-           </table> 
-        </div>
-    </div>
+</div>
+
+<div id="tabs-2"></div>
+<div id="tabs-3"></div>
+<div id="tabs-4"></div>
+<div id="tabs-5"></div>
+<div id="tabs-6"></div>
+<div id="tabs-7"></div>
+<div id="tabs-8"></div>
+<div id="tabs-9"></div>
+<div id="tabs-10"></div>
+<div id="tabs-11"></div>
+<div id="tabs-12"></div>
+<div id="tabs-13">
+ <table>
+     <tr>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td class="highlight_green">to</td>
+
+     </tr>
+     <tr>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td class="highlight_green">tal</td>
+
+     </tr>
+     <tr>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td class="highlight_green"></td>
+
+     </tr>
+     <tr>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td class="highlight_green"></td>
+
+     </tr>
+     <tr>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td class="highlight_green"></td>
+     </tr>
+</table> 
+
+      <p>
+           Start Date:<input type="text" id="datepicker">
+     </p>
+     <p>
+           End Date:<input type="text" id="datepicker2">
+     </p>
+     <p><select>
+        <option disabled>Choose User</option>
+        <option selected value="User1">User1</option>
+        <option value="User2">User2</option>
+        <option value="User3">User3</option>
+        </select></p>
+  <p><button id="check">Check</button></p>
+
+</div>
+</div>
 </body>
 <script src="js/common4.js"></script>
 </html>
