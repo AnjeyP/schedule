@@ -118,18 +118,34 @@ function init(){
 				&& index!==93 && index!==94 && index!==158 && index!==222 && index!==318 && 
 				index!==382 && index>=res){
 				count++;
-			if (count%2!==0 && count%3!==0) $(this).addClass("user1").removeClass("user2 user3");
-			if (count%2===0 && count%4!==0) $(this).addClass("user2").removeClass("user1 user3");
-			if (count%3===0) $(this).addClass("user3").removeClass("user1 user2");
-			if (count%4===0) $(this).removeClass("user1 user2 user3");
-		}
+				if (count%2!==0 && count%3!==0) $(this).addClass("user1").removeClass("user2 user3");
+				if (count%2===0 && count%4!==0) $(this).addClass("user2").removeClass("user1 user3");
+				if (count%3===0) $(this).addClass("user3").removeClass("user1 user2");
+				if (count%4===0) $(this).removeClass("user1 user2 user3");
+			}
 
-	})
+		})
 
 
 	})
 	
+	$("#filters").on('click', '.btn1', function(){
 	
+		td.filter('.user2').toggleClass('hide');
+		td.filter('.user3').toggleClass('hide');
+		$('.btn1').toggleClass('highlight_blue');
+	
+	}).on('click','.btn2', function(){
+	
+		td.filter('.user1').toggleClass('hide');
+		td.filter('.user3').toggleClass('hide');
+		$('.btn2').toggleClass('highlight_green');
+	}).on('click','.btn3', function(){
+		
+		td.filter('.user1').toggleClass('hide');
+		td.filter('.user2').toggleClass('hide');
+		$('.btn3').toggleClass('highlight_pink');
+	})
 
 
 }
