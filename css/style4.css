@@ -59,3 +59,110 @@ th{
 .vacation_year{
 	border: 4px solid red;
 }
+/* tooltip */
+.tooltip1 {
+    position: relative;
+    display: inline-block;
+    color: rgb(132, 58, 19);  
+}
+.tooltip2 {
+    position: relative;
+    display: inline-block;
+    color: rgb(249, 218, 197);  
+}
+.tooltip3 {
+    position: relative;
+    display: inline-block;
+    color: rgb(199, 132, 89);  
+}
+
+.tooltip1 .tooltiptext1 {
+    visibility: hidden;
+    width: 300px;
+    background-color: lightblue;
+    color: black;
+    text-align: center;
+    border-radius: 6px;
+    padding: 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    margin-left: -143px;
+    font-size: 12px;
+}
+
+.tooltip1 .tooltiptext1::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    text-align: left;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: lightblue transparent transparent transparent;
+}
+
+.tooltip1:hover .tooltiptext1 {
+    visibility: visible;
+}
+.tooltip2 .tooltiptext2 {
+    visibility: hidden;
+    width: 300px;
+    background-color: lightblue;
+    color: black;
+    text-align: center;
+    border-radius: 6px;
+    padding: 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    margin-left: -143px;
+    font-size: 12px;
+}
+
+.tooltip2 .tooltiptext2::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    text-align: left;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: lightblue transparent transparent transparent;
+}
+
+.tooltip2:hover .tooltiptext2 {
+    visibility: visible;
+}
+.tooltip3 .tooltiptext3 {
+    visibility: hidden;
+    width: 300px;
+    background-color: lightblue;
+    color: black;
+    text-align: center;
+    border-radius: 6px;
+    padding: 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    margin-left: -143px;
+    font-size: 12px;
+}
+
+.tooltip3 .tooltiptext3::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    text-align: left;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: lightblue transparent transparent transparent;
+}
+
+.tooltip3:hover .tooltiptext3 {
+    visibility: visible;
+}

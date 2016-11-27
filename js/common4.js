@@ -217,10 +217,14 @@ function init(){
 		})
 
 			//generating working schedule '1by2' for employee
+			var htmlString1 = "<div class='tooltip1'>.<pre class='tooltiptext1'></br><em>Name:</em> Andrii Parfeniuk </br><em>Department:</em> New Channel Development </br><em>Position:</em>Senior Director of Broadcasting </br><em>Phone:</em> +38(050)123-45-67</pre></div>";
+			var htmlString2 = "<div class='tooltip2'>.<pre class='tooltiptext2'></br><em>Name:</em> Victor Shevchuk </br><em>Department:</em> New Channel Development </br><em>Position:</em>Director of Broadcasting </br><em>Phone:</em> +38(050)789-10-11</pre></div>";
+			var htmlString3 = "<div class='tooltip3'>.<pre class='tooltiptext3'></br><em>Name:</em> Leonid Kravets </br><em>Department:</em> New Channel Development </br><em>Position:</em>Director of Broadcasting </br><em>Phone:</em> +38(050)123-45-67</pre></div>";
+			
 			tab2_td.each(function(index){
-				if(index>=64 && index<=94 && (index-64)%3==0) $(this).addClass('user3');
-				if(index>=98 && index<=126 && (index-98)%3==0) $(this).addClass('user2');
-				if(index>=129 && index<=158 && (index-129)%3==0) $(this).addClass('user1');
+				if(index>=64 && index<=94 && (index-64)%3==0) $(this).addClass('user3').html(htmlString3);
+				if(index>=98 && index<=126 && (index-98)%3==0) $(this).addClass('user2').html(htmlString2);
+				if(index>=129 && index<=158 && (index-129)%3==0) $(this).addClass('user1').html(htmlString1);
 			})
 			//user stats call
 			userStatistics();
@@ -229,12 +233,11 @@ function init(){
 			tab2_td.each(function(index){
 				$(this).click(function(){
 					if (index>=96 && index<=126) {
-						$(tab2_td[index]).addClass('user2');
-						$(td[index+288]).addClass('user2').removeClass('user1 user3');
+						$(tab2_td[index]).addClass('user2').html("").html(htmlString2);
 						//representing the changes also in year view
-
-						$(tab2_td[index-32]).removeClass('user3');
-						$(tab2_td[index+32]).removeClass('user1');
+						$(td[index+288]).addClass('user2').removeClass('user1 user3');
+						$(tab2_td[index-32]).removeClass('user3').html("");
+						$(tab2_td[index+32]).removeClass('user1').html("");
 						userStatistics();
 					}
 				})
@@ -243,10 +246,10 @@ function init(){
 			tab2_td.each(function(index){
 				$(this).click(function(){
 					if (index>=64 && index<=94) {
-						$(tab2_td[index]).addClass('user3');
+						$(tab2_td[index]).addClass('user3').html(htmlString3);
 						$(td[index+320]).addClass('user3').removeClass('user1 user2');
-						$(tab2_td[index+32]).removeClass('user2');
-						$(tab2_td[index+64]).removeClass('user1');
+						$(tab2_td[index+32]).removeClass('user2').html("");
+						$(tab2_td[index+64]).removeClass('user1').html("");
 						userStatistics();
 					}
 				})
@@ -255,10 +258,10 @@ function init(){
 			tab2_td.each(function(index){
 				$(this).click(function(){
 					if (index>=128 && index<=158) {
-						$(tab2_td[index]).addClass('user1');
+						$(tab2_td[index]).addClass('user1').html(htmlString1);
 						$(td[index+256]).addClass('user1').removeClass('user3 user2');
-						$(tab2_td[index-32]).removeClass('user2');
-						$(tab2_td[index-64]).removeClass('user3');
+						$(tab2_td[index-32]).removeClass('user2').html("");
+						$(tab2_td[index-64]).removeClass('user3').html("");
 						userStatistics();
 					}
 				})
