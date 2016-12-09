@@ -1,7 +1,7 @@
 $(init);
 function init(){
 	
-	var td = $('#tabs-1').find('td');
+	td = $('#tabs-1').find('td');
 	
 	//filling months and days
 	var monthArr = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
@@ -72,15 +72,16 @@ function init(){
 		})
 
 	//determining the current date
-	var data = new Date();
-	var date = data.getDate();
-	var montn = data.getMonth();
+	data = new Date();
+	date = data.getDate();
+	montn = data.getMonth();
+	console.log(month);
 	var year = data.getFullYear();
 	$("th").text(year);
-	/*var month=6;
+	/*var month=7;
 	var date = 5;*/
 
-	switch (month-1) {
+	switch (month) {
 		case 1: res = 32+date-1;
 		break;
 		case 2: res = 64+date-1;
@@ -109,11 +110,80 @@ function init(){
 	td.each(function(index){
 		if (index==res || index==res-date || index==date-1) $(this).addClass("current");
 		if (index==res-date) 	$(this).css('color','red');
-		//hardcode need to fix
-		if (index<=29 && ((index-4)%7==0 || (index-5)%7==0))
+		//hardcode need to fix for every month
+		if (index<=30 && ((index-2)%7==0 || (index-3)%7==0))
 			$(this).css("background-color","red");
 		else if (index<=30) $(this).css("background-color","pink");
 	})
+
+	//!!!!!!!!!!!!!!
+	//var res;
+	/*td.each(function(index){
+		switch (month) {
+			case 1: {
+				res = 32+date-1;
+				weekendMappingPart(index, res, 30,1,2);
+			}
+			break;
+			case 2: {
+				res = 64+date-1;
+				weekendMappingPart(index, res, 28,5,6);
+			}
+			break;
+			case 3: {
+				res = 96+date-1;
+				weekendMappingPart(index, res, 30,4,5);
+			}
+			break;
+			case 4: {
+				res = 128+date-1;
+				weekendMappingPart(index, res, 29,1,2);
+			}
+			break;
+			case 5: {
+				res = 160+date-1;
+				weekendMappingPart(index, res, 30,1,2);
+			}
+			break;
+			case 6: {
+				res = 192+date-1;
+				weekendMappingPart(index, res, 30,0,6);
+			}
+			break;
+			case 7: {
+				res = 224+date-1;
+				weekendMappingPart(index, res, 30,1,2);
+			}
+			break;
+			case 8: {
+				res = 256+date-1;
+				weekendMappingPart(index, res, 30,5,6);
+			}
+			break;
+			case 9: {
+				res = 288+date-1;
+				weekendMappingPart(index, res, 29,2,3);
+			}
+			break;
+			case 10: {
+				res = 320+date-1;
+				weekendMappingPart(index, res, 30,0,1);
+			}
+			break;
+			case 11: {
+				res = 352+date-1;
+				weekendMappingPart(index, res, 29,4,5);
+			}
+			break;
+			case 12: {
+				res = 384+date-1;
+				weekendMappingPart(index, res, 30,2,3);
+			}
+			break;
+		}
+		
+	})	*/
+	//!!!!!!!!!!!!!!
 
 	// switch employee by click
 	td.each(function(index){
@@ -180,7 +250,7 @@ function init(){
 	weekendMapping(383,30,2,3);
 
 	//auxilary functions
-	function weekendMapping(a,b,c,d){
+	function weekendMapping(a, b, c, d){
 		$(td[a]).click(function(){
 			$(this).css('color','red');
 				//to obtain universal array for comparising
@@ -196,6 +266,14 @@ function init(){
 
 				})	
 			})
+	}
+	function weekendMappingPart(index, res, b, c, d){
+		if (index==res || index==res-date || index==date-1) $(this).addClass("current");
+		if (index==res-date) 	$(this).css('color','red');
+		//hardcode need to fix for every month
+		if (index<=b && ((index-c)%7==0 || (index-d)%7==0))
+			$(this).css("background-color","red");
+		else if (index<=30) $(this).css("background-color","pink");
 	}
 		//tabs-13 december
 		var tab2_td = $('#tabs-13').find('td');
@@ -217,9 +295,9 @@ function init(){
 		})
 
 			//generating working schedule '1by2' for employee
-			var htmlString1 = "<div class='tooltip1'>.<pre class='tooltiptext1'></br><em>Name:</em> Andrii Parfeniuk </br><em>Department:</em> New Channel Development </br><em>Position:</em>Senior Director of Broadcasting </br><em>Phone:</em> +38(050)123-45-67</pre></div>";
-			var htmlString2 = "<div class='tooltip2'>.<pre class='tooltiptext2'></br><em>Name:</em> Victor Shevchuk </br><em>Department:</em> New Channel Development </br><em>Position:</em>Director of Broadcasting </br><em>Phone:</em> +38(050)789-10-11</pre></div>";
-			var htmlString3 = "<div class='tooltip3'>.<pre class='tooltiptext3'></br><em>Name:</em> Leonid Kravets </br><em>Department:</em> New Channel Development </br><em>Position:</em>Director of Broadcasting </br><em>Phone:</em> +38(050)123-45-67</pre></div>";
+			var htmlString1 = "<div class='tooltip1'>.<pre class='tooltiptext1'></br><em>Name:</em> Andrii Parfeniuk </br><em>Department:</em> New Channel Development </br><em>Position:</em> Senior Director of Broadcasting </br><em>Phone:</em> +38(050)123-45-67</pre></div>";
+			var htmlString2 = "<div class='tooltip2'>.<pre class='tooltiptext2'></br><em>Name:</em> Victor Shevchuk </br><em>Department:</em> New Channel Development </br><em>Position:</em> Director of Broadcasting </br><em>Phone:</em> +38(050)789-10-11</pre></div>";
+			var htmlString3 = "<div class='tooltip3'>.<pre class='tooltiptext3'></br><em>Name:</em> Leonid Kravets </br><em>Department:</em> New Channel Development </br><em>Position:</em> Director of Broadcasting </br><em>Phone:</em> +38(050)123-45-67</pre></div>";
 			
 			tab2_td.each(function(index){
 				if(index>=64 && index<=94 && (index-64)%3==0) $(this).addClass('user3').html(htmlString3);
@@ -286,35 +364,35 @@ function init(){
 			var endVacation = Number(endData.split("")[3]+endData.split("")[4]);
 			var optionArr = $('select').children();
 			for (key in optionArr) if (optionArr[key].selected==true) var user = optionArr[key].value;
-			if (user =="User3")
-						tab2_td.each(function(index){
-								
-								if(index>=64+startVacation-1 && index<=64+endVacation-1) {
-									if ($(this).hasClass("vacation_month")) $(this).removeClass("vacation_month");
-									$(tab2_td[index]).addClass("vacation_month");
-									$(td[index+320]).addClass("vacation_year");
-								}
-							})	
-			if (user =="User2")
-						tab2_td.each(function(index){
-							
-							if(index>=96+(startVacation-1) && index<=96+(endVacation-1)) {
-								if ($(this).hasClass("vacation_month")) $(this).removeClass("vacation_month");
-								$(this).addClass("vacation_month");
-								$(td[index+288]).addClass("vacation_year");
-							}
-						})
-			if (user =="User1")
-						tab2_td.each(function(index){
-							
-							if(index>=128+(startVacation-1) && index<=128+(endVacation-1)) {
-								if ($(this).hasClass("vacation_month")) $(this).removeClass("vacation_month");
-								$(this).addClass("vacation_month");
-								$(td[index+256]).addClass("vacation_year");
-							}
-						})	
-		})
-		
-			
+				if (user =="User3")
+					tab2_td.each(function(index){
 
-}
+						if(index>=64+startVacation-1 && index<=64+endVacation-1) {
+							if ($(this).hasClass("vacation_month")) $(this).removeClass("vacation_month");
+							$(tab2_td[index]).addClass("vacation_month");
+							$(td[index+320]).addClass("vacation_year");
+						}
+					})	
+				if (user =="User2")
+					tab2_td.each(function(index){
+
+						if(index>=96+(startVacation-1) && index<=96+(endVacation-1)) {
+							if ($(this).hasClass("vacation_month")) $(this).removeClass("vacation_month");
+							$(this).addClass("vacation_month");
+							$(td[index+288]).addClass("vacation_year");
+						}
+					})
+				if (user =="User1")
+					tab2_td.each(function(index){
+
+						if(index>=128+(startVacation-1) && index<=128+(endVacation-1)) {
+							if ($(this).hasClass("vacation_month")) $(this).removeClass("vacation_month");
+							$(this).addClass("vacation_month");
+							$(td[index+256]).addClass("vacation_year");
+						}
+					})	
+			})
+		
+
+
+	}
