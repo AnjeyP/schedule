@@ -25,63 +25,63 @@ function init(){
 			if ((index-33)%3===0	&& index>31 && index<63) $(this).addClass("user2");
 			if ((index-34)%3===0 && index>31 && index<63) $(this).addClass("user3");
 			//feb
-			if ((index-64)%3===0	&& index>63 && index<93) $(this).addClass("user2");
-			if ((index-65)%3===0	&& index>63 && index<93) $(this).addClass("user3");
-			if ((index-66)%3===0 && index>63 && index<93) $(this).addClass("user1");
+			if ((index-64)%3===0	&& index>63 && index<92) $(this).addClass("user2"); //index<93 - если надо учесть высокосный год
+			if ((index-65)%3===0	&& index>63 && index<92) $(this).addClass("user3");
+			if ((index-66)%3===0 && index>63 && index<92) $(this).addClass("user1");
 			//march
-			if ((index-96)%3===0	&& index>95 && index<127) $(this).addClass("user1");
-			if ((index-97)%3===0	&& index>95 && index<127) $(this).addClass("user2");
-			if ((index-98)%3===0 && index>95 && index<127) $(this).addClass("user3");
+			if ((index-96)%3===0	&& index>95 && index<127) $(this).addClass("user3");
+			if ((index-97)%3===0	&& index>95 && index<127) $(this).addClass("user1");
+			if ((index-98)%3===0 && index>95 && index<127) $(this).addClass("user2");
 			//april
-			if ((index-128)%3===0	&& index>127 && index<158) $(this).addClass("user2");
-			if ((index-129)%3===0	&& index>127 && index<158) $(this).addClass("user3");
-			if ((index-130)%3===0 && index>127 && index<158) $(this).addClass("user1");
+			if ((index-128)%3===0	&& index>127 && index<158) $(this).addClass("user1");
+			if ((index-129)%3===0	&& index>127 && index<158) $(this).addClass("user2");
+			if ((index-130)%3===0 && index>127 && index<158) $(this).addClass("user3");
 			//may
-			if ((index-160)%3===0	&& index>159 && index<191) $(this).addClass("user2");
-			if ((index-161)%3===0	&& index>159 && index<191) $(this).addClass("user3");
-			if ((index-162)%3===0 && index>159 && index<191) $(this).addClass("user1");
+			if ((index-160)%3===0	&& index>159 && index<191) $(this).addClass("user1");
+			if ((index-161)%3===0	&& index>159 && index<191) $(this).addClass("user2");
+			if ((index-162)%3===0 && index>159 && index<191) $(this).addClass("user3");
 			//june
-			if ((index-192)%3===0	&& index>191 && index<222) $(this).addClass("user3");
-			if ((index-193)%3===0	&& index>191 && index<222) $(this).addClass("user1");
-			if ((index-194)%3===0 && index>191 && index<222) $(this).addClass("user2");
+			if ((index-192)%3===0	&& index>191 && index<222) $(this).addClass("user2");
+			if ((index-193)%3===0	&& index>191 && index<222) $(this).addClass("user3");
+			if ((index-194)%3===0 && index>191 && index<222) $(this).addClass("user1");
 			//july
-			if ((index-224)%3===0	&& index>223 && index<255) $(this).addClass("user3");
-			if ((index-225)%3===0	&& index>223 && index<255) $(this).addClass("user1");
-			if ((index-226)%3===0 && index>223 && index<255) $(this).addClass("user2");
+			if ((index-224)%3===0	&& index>223 && index<255) $(this).addClass("user2");
+			if ((index-225)%3===0	&& index>223 && index<255) $(this).addClass("user3");
+			if ((index-226)%3===0 && index>223 && index<255) $(this).addClass("user1");
 			//august
-			if ((index-256)%3===0	&& index>255 && index<287) $(this).addClass("user1");
-			if ((index-257)%3===0	&& index>255 && index<287) $(this).addClass("user2");
-			if ((index-258)%3===0 && index>255 && index<287) $(this).addClass("user3");
+			if ((index-256)%3===0	&& index>255 && index<287) $(this).addClass("user3");
+			if ((index-257)%3===0	&& index>255 && index<287) $(this).addClass("user1");
+			if ((index-258)%3===0 && index>255 && index<287) $(this).addClass("user2");
 			//september
-			if ((index-288)%3===0	&& index>287 && index<318) $(this).addClass("user2");
-			if ((index-289)%3===0	&& index>287 && index<318) $(this).addClass("user3");
-			if ((index-290)%3===0 && index>287 && index<318) $(this).addClass("user1");
+			if ((index-288)%3===0	&& index>287 && index<318) $(this).addClass("user1");
+			if ((index-289)%3===0	&& index>287 && index<318) $(this).addClass("user2");
+			if ((index-290)%3===0 && index>287 && index<318) $(this).addClass("user3");
 			//october
-			if ((index-320)%3===0	&& index>319 && index<351) $(this).addClass("user2");
-			if ((index-321)%3===0	&& index>319 && index<351) $(this).addClass("user3");
-			if ((index-322)%3===0 && index>319 && index<351) $(this).addClass("user1");
+			if ((index-320)%3===0	&& index>319 && index<351) $(this).addClass("user1");
+			if ((index-321)%3===0	&& index>319 && index<351) $(this).addClass("user2");
+			if ((index-322)%3===0 && index>319 && index<351) $(this).addClass("user3");
 			//november
-			if ((index-352)%3===0	&& index>351 && index<382) $(this).addClass("user3");
-			if ((index-353)%3===0	&& index>351 && index<382) $(this).addClass("user1");
-			if ((index-354)%3===0 && index>351 && index<382) $(this).addClass("user2");
+			if ((index-352)%3===0	&& index>351 && index<382) $(this).addClass("user2");
+			if ((index-353)%3===0	&& index>351 && index<382) $(this).addClass("user3");
+			if ((index-354)%3===0 && index>351 && index<382) $(this).addClass("user1");
 			//december
-			if ((index-384)%3===0	&& index>383 && index<415) $(this).addClass("user3");
-			if ((index-385)%3===0	&& index>383 && index<415) $(this).addClass("user1");
-			if ((index-386)%3===0 && index>383 && index<415) $(this).addClass("user2");
+			if ((index-384)%3===0	&& index>383 && index<415) $(this).addClass("user2");
+			if ((index-385)%3===0	&& index>383 && index<415) $(this).addClass("user3");
+			if ((index-386)%3===0 && index>383 && index<415) $(this).addClass("user1");
 
 		})
 
 	//determining the current date
-	data = new Date();
-	date = data.getDate();
-	montn = data.getMonth();
-	console.log(month);
+	var data = new Date();
+	var date = data.getDate();
+	var months = data.getMonth()+1; //иногда этот метод выдает ошибку
+	/*console.log(months);*/
 	var year = data.getFullYear();
 	$("th").text(year);
 	/*var month=7;
 	var date = 5;*/
 
-	switch (month) {
+	switch (months) {
 		case 1: res = 32+date-1;
 		break;
 		case 2: res = 64+date-1;
@@ -267,14 +267,15 @@ function init(){
 				})	
 			})
 	}
-	function weekendMappingPart(index, res, b, c, d){
+	/*function weekendMappingPart(index, res, b, c, d){
 		if (index==res || index==res-date || index==date-1) $(this).addClass("current");
 		if (index==res-date) 	$(this).css('color','red');
 		//hardcode need to fix for every month
 		if (index<=b && ((index-c)%7==0 || (index-d)%7==0))
 			$(this).css("background-color","red");
 		else if (index<=30) $(this).css("background-color","pink");
-	}
+	}*/
+
 		//tabs-13 december
 		var tab2_td = $('#tabs-13').find('td');
 		var janDay=0;
@@ -295,6 +296,7 @@ function init(){
 		})
 
 			//generating working schedule '1by2' for employee
+			//users tooltips
 			var htmlString1 = "<div class='tooltip1'>.<pre class='tooltiptext1'></br><em>Name:</em> Andrii Parfeniuk </br><em>Department:</em> New Channel Development </br><em>Position:</em> Senior Director of Broadcasting </br><em>Phone:</em> +38(050)123-45-67</pre></div>";
 			var htmlString2 = "<div class='tooltip2'>.<pre class='tooltiptext2'></br><em>Name:</em> Victor Shevchuk </br><em>Department:</em> New Channel Development </br><em>Position:</em> Director of Broadcasting </br><em>Phone:</em> +38(050)789-10-11</pre></div>";
 			var htmlString3 = "<div class='tooltip3'>.<pre class='tooltiptext3'></br><em>Name:</em> Leonid Kravets </br><em>Department:</em> New Channel Development </br><em>Position:</em> Director of Broadcasting </br><em>Phone:</em> +38(050)123-45-67</pre></div>";
